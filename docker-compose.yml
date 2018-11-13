@@ -1,0 +1,11 @@
+version: "3"
+services:
+  nodeapp:
+    ports:
+      - "3000:8080"
+    volumes:
+      - ".:/mnt"
+    container_name: "vue-todolist"
+    image: node:latest
+    env_file: .env
+    command: /sbin/init -D
